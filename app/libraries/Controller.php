@@ -68,4 +68,6 @@ class Controller
         $title = $data["title"];
         return "$title - ";
     }
+
+
 }

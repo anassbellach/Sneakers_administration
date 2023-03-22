@@ -25,13 +25,12 @@
                 <fieldset class="margin-bottom-xl">
                     <legend class="form-legend margin-bottom-md">Create a Sneaker</legend>
 
-
                     <!-- input text -->
                     <div class="margin-bottom-sm">
                         <div class="grid gap-xxs">
 
                             <div class="col-6@lg">
-                                <input class="form-control width-100%" type="hidden" name="sneakerId" id="sneakerId" value="<?=$data['sneakersId']?>" required>
+                                <input class="form-control width-100%" type="hidden" name="sneakerId" id="sneakerId" value="<?=$data['userid']?>" required>
                             </div>
                         </div>
                     </div>
@@ -44,10 +43,10 @@
                                 <label class="inline-block text-sm padding-top-xs@lg" for="custom-select">Brand</label>
                             </div>
 
-
                             <div class="col-6@lg">
                                 <div class="select">
                                     <select class="select__input form-control" name="brand" id="brand">
+                                        <option disabled selected>Brand </option>
                                         <?php foreach ($data['allBrands'] as $brand) {
                                             echo '<option value="' . $brand->brandsId . '">' . $brand->brandsName . '</option>';
                                         } ?>
@@ -83,9 +82,9 @@
                             <div class="col-6@lg">
                                 <div class="select">
                                     <select class="select__input form-control" name="gender" id="gender">
-                                        <option value="Mens">Mens</option>
-                                        <option value="Womans">Womans</option>
-                                        <option value="GS">GS</option>
+                                        <option value="0">Mens</option>
+                                        <option value="1">Womans</option>
+                                        <option value="2">GS</option>
                                     </select>
                                     <svg class="icon select__icon" aria-hidden="true" viewBox="0 0 16 16"><polyline points="1 5 8 12 15 5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>
                                 </div>
@@ -97,12 +96,12 @@
                     <div class="margin-bottom-sm">
                         <div class="grid gap-xxs">
                             <div class="col-3@lg">
-                                <label class="inline-block text-sm padding-top-xs@lg" for="date-input-1">Select date<i class="sr-only">, format is mm/dd/yyyy</i></label>
+                                <label class="inline-block text-sm padding-top-xs@lg" for="date-input-1">Select date<i class="sr-only">, format is dd/mm/yyyy</i></label>
                             </div>
 
                             <div class="col-6@lg date-input js-date-input">
                                 <div class="date-input__wrapper">
-                                    <input type="text" class="form-control width-100% date-input__text js-date-input__text" placeholder="dd/mm/yyyy" autocomplete="off" id="releaseDate" name="releaseDate">
+                                    <input type="text" class="form-control width-100% date-input__text js-date-input__text" placeholder="mm/dd/yyyy" autocomplete="off" id="releaseDate" name="releaseDate">
 
                                     <button class="reset date-input__trigger js-date-input__trigger js-tab-focus" aria-label="Select date using calendar widget" type="button">
                                         <svg class="icon" aria-hidden="true" viewBox="0 0 20 20"><g fill="none" stroke="currentColor" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2"><rect x="1" y="4" width="18" height="14" rx="1"/><line x1="5" y1="1" x2="5" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="1" y1="9" x2="19" y2="9"/></g></svg>

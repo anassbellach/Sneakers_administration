@@ -173,11 +173,18 @@
     
                 <ul class="sidenav__list">
                   <li class="sidenav__item">
-                    <a href="<?= URLROOT?>BooksController/" class="sidenav__link">
-                      <span class="sidenav__text text-sm@md">Books</span>
+                    <a href="<?= URLROOT?>SneakersController/index" class="sidenav__link">
+                      <span class="sidenav__text text-sm@md">Sneakers</span>
                     </a>
                   </li>
                 </ul>
+                  <ul class="sidenav__list">
+                      <li class="sidenav__item">
+                          <a href="<?= URLROOT?>BrandsController/index" class="sidenav__link">
+                              <span class="sidenav__text text-sm@md">Brands</span>
+                          </a>
+                      </li>
+                  </ul>
               </li>
             </ul>
             <div class="sidenav__divider margin-y-xs" role="presentation"></div>
